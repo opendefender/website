@@ -16,15 +16,24 @@ module.exports = {
       boxShadow: {
         'neumorphic': '8px 8px 16px rgba(0, 0, 0, 0.1), -8px -8px 16px rgba(255, 255, 255, 0.1)',
         'neumorphic-dark': '8px 8px 16px rgba(0, 0, 0, 0.2), -8px -8px 16px rgba(255, 255, 255, 0.05)',
+        'metal-shader': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
       },
       animation: {
         'fade-in': 'fadeIn 1s ease-in-out',
+        'kinetic-text': 'kinetic 2s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+        kinetic: {
+          '0%, 100%': { transform: 'rotate(0deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+      },
+      fontFamily: {
+        'bold-kinetic': ['"Poppins"', 'sans-serif'], 
       },
     },
   },
