@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
+children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
@@ -20,7 +20,9 @@ export default function RootLayout({
     <html lang="fr" suppressHydrationWarning>
       <body className={`${inter.variable} ${robotoMono.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
+          <Header />
+          <div className="pt-16">{children}</div>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
